@@ -1,0 +1,170 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  background: white;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.container .image-section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: url("img/Image.svg") no-repeat center center;
+  background-size: cover;
+}
+.container .form-section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 60px 40px;
+}
+.container .form-section .form-wrapper {
+  max-width: 400px;
+  width: 100%;
+}
+.container .form-section .form-wrapper h1 {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+.container .form-section .form-wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.container .form-section .form-wrapper form label {
+  font-size: 14px;
+  color: rgb(52, 64, 84);
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.container .form-section .form-wrapper form label input[type=text],
+.container .form-section .form-wrapper form label input[type=email],
+.container .form-section .form-wrapper form label input[type=password] {
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid rgb(208, 213, 221);
+  border-radius: 6px;
+}
+.container .form-section .form-wrapper form .gender {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.container .form-section .form-wrapper form .gender span {
+  margin-right: 10px;
+}
+.container .form-section .form-wrapper form .gender label {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container .form-section .form-wrapper form .gender label input {
+  margin-right: 6px;
+}
+.container .form-section .form-wrapper form .file-btn {
+  padding: 10px 16px;
+  border: 1px solid rgb(208, 213, 221);
+  background-color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 116px;
+}
+.container .form-section .form-wrapper form .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: gray;
+}
+.container .form-section .form-wrapper form .checkbox a {
+  color: gray;
+}
+.container .form-section .form-wrapper form .submit-btn {
+  background-color: rgb(127, 86, 217);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+  .container .form-section {
+    padding: 40px 30px;
+  }
+  .container .form-wrapper {
+    max-width: 100%;
+  }
+}
+@media (max-width: 760px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .image-section {
+    height: 200px;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+  .container .form-section {
+    padding: 30px 20px;
+  }
+}
