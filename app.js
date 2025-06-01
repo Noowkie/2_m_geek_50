@@ -1,49 +1,67 @@
-// Основы работы с массивами
-let data = [42, 'текст', true, null, undefined, 3.14];
+let employees = [
+    {
+        name: "Давид",
+        age: 30,
+        gender: "мужской",
+        phone: {
+            home: "123-45-67",
+            mobile: "89012345678"
+        }
+    },
+    {
+        name: "Уулжан",
+        age: 24,
+        gender: "женский",
+        phone: {
+            home: "234-56-78",
+            mobile: "89023456789"
+        }
+    },
+    {
+        name: "Захар",
+        age: 40,
+        gender: "мужской",
+        phone: {
+            home: "345-67-89",
+            mobile: "89034567890"
+        }
+    },
+    {
+        name: "Алиса",
+        age: 28,
+        gender: "женский",
+        phone: {
+            home: "456-78-90",
+            mobile: "89045678901"
+        }
+    },
+    {
+        name: "Карим",
+        age: 22,
+        gender: "мужской",
+        phone: {
+            home: "567-89-01",
+            mobile: "89056789012"
+        }
+    }
+];
 
-console.log("Длина массива data:", data.length);
-console.log("Первый элемент:", data[0]);
-console.log("Последний элемент:", data[data.length - 1]);
-data[2] = false;
-console.log("Изменённый массив data:", data);
 
-let numbers = [10, 20, 30, 40, 50];
-let index30 = numbers.indexOf(30);
-console.log("Индекс числа 30:", index30);
-let has100 = numbers.includes(100);
-console.log("Содержит ли массив число 100:", has100);
+let newEmployee = {
+    name: "Арина",
+    age: 35,
+    gender: "женский",
+    phone: {
+        home: "678-90-12",
+        mobile: "89067890123"
+    }
+};
 
-//Методы массивов
-let fruits = ['apple', 'banana', 'orange', 'grape', 'kiwi'];
-fruits.push('mango');
-fruits.unshift('strawberry');
-let lastFruit = fruits.pop();
-let firstFruit = fruits.shift();
-let orangeIndex = fruits.indexOf('orange');
-let hasBanana = fruits.includes('banana');
+employees.push(newEmployee);
 
-console.log("Массив после всех операций:", fruits);
-console.log("Удалённый последний элемент:", lastFruit);
-console.log("Удалённый первый элемент:", firstFruit);
-console.log("Индекс 'orange':", orangeIndex);
-console.log("Содержит ли массив 'banana':", hasBanana);
+let olderThan25 = employees.filter(emp => emp.age > 25);
+let employeeNames = employees.map(emp => emp.name);
 
-//Срезы и сортировка
-let numbers2 = [45, 12, 67, 23, 89, 34, 56, 91, 8, 77];
-let slice1 = numbers2.slice(2, 7);
-let slice2 = numbers2.slice(-3);
-let sortedPlus = [...numbers2].sort((a, b) => a - b);
-let sortedMinus = [...numbers2].sort((a, b) => b - a);
-let joined = numbers2.join(" - ");
-
-console.log("Срез с 3-го по 7-й элемент:", slice1);
-console.log("Срез последних 3 элементов:", slice2);
-console.log("Отсортирован по возрастанию:", sortedPlus);
-console.log("Отсортирован по убыванию:", sortedMinus);
-console.log("Объединение элементов через ' - ':", joined);
-
-//Spread-оператор и вложенные массивы
-let array1 = [1, 2, 3];
-let array2 = [4, 5, 6];
-let combinedArray = [...array1, ...array2];
-console.log("Объединённый массив:", combinedArray);
+employees.forEach(emp => {
+    console.log(`Имя: ${emp.name}, Возраст: ${emp.age}, Пол: ${emp.gender}, Домашний: ${emp.phone.home}, Сотовый: ${emp.phone.mobile}`);
+});
