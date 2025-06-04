@@ -1,67 +1,57 @@
-let employees = [
-    {
-        name: "Давид",
-        age: 30,
-        gender: "мужской",
-        phone: {
-            home: "123-45-67",
-            mobile: "89012345678"
-        }
-    },
-    {
-        name: "Уулжан",
-        age: 24,
-        gender: "женский",
-        phone: {
-            home: "234-56-78",
-            mobile: "89023456789"
-        }
-    },
-    {
-        name: "Захар",
-        age: 40,
-        gender: "мужской",
-        phone: {
-            home: "345-67-89",
-            mobile: "89034567890"
-        }
-    },
-    {
-        name: "Алиса",
-        age: 28,
-        gender: "женский",
-        phone: {
-            home: "456-78-90",
-            mobile: "89045678901"
-        }
-    },
-    {
-        name: "Карим",
-        age: 22,
-        gender: "мужской",
-        phone: {
-            home: "567-89-01",
-            mobile: "89056789012"
+
+function checkEvenOdd(num) {
+    return num % 2 === 0 ? "Четное" : "Нечетное";
+}
+
+console.log(checkEvenOdd(4)); // "Четное"
+console.log(checkEvenOdd(7)); // "Нечетное"
+
+
+function factorial(n) {
+    if (n === 0 || n === 1) return 1;
+    let result = 1;
+    for (let i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+
+console.log(factorial(5)); // 120
+console.log(factorial(0)); // 1
+
+
+
+function findMax(arr) {
+    return Math.max(...arr);
+}
+
+
+console.log(findMax([1, 5, 3, 9, 2])); // 9
+console.log(findMax([-5, -1, -8])); // -1
+
+
+
+function countVowels(str) {
+    const vowels = 'aeiou';
+    let count = 0;
+    for (let char of str.toLowerCase()) {
+        if (vowels.includes(char)) {
+            count++;
         }
     }
-];
+    return count;
+}
+
+console.log(countVowels("hello")); // 2
+console.log(countVowels("world")); // 1
 
 
-let newEmployee = {
-    name: "Арина",
-    age: 35,
-    gender: "женский",
-    phone: {
-        home: "678-90-12",
-        mobile: "89067890123"
-    }
-};
 
-employees.push(newEmployee);
+function sumArray(arr) {
+    return arr.reduce((sum, num) => sum + num, 0);
+}
 
-let olderThan25 = employees.filter(emp => emp.age > 25);
-let employeeNames = employees.map(emp => emp.name);
 
-employees.forEach(emp => {
-    console.log(`Имя: ${emp.name}, Возраст: ${emp.age}, Пол: ${emp.gender}, Домашний: ${emp.phone.home}, Сотовый: ${emp.phone.mobile}`);
-});
+console.log(sumArray([1, 2, 3, 4, 5])); // 15
+console.log(sumArray([-1, -2, 3])); // 0
