@@ -1,0 +1,51 @@
+body {
+  background-color: #222;
+  color: cyan;
+  text-align: center;
+  padding-top:300px;
+}
+
+h1 {
+  font-size: 60px;
+  color: cyan;
+  margin-bottom: 20px;
+}
+
+#counter {
+  font-size: 100px;
+  color: cyan;
+  margin: 30px 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  font-size: 32px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background: none;
+  cursor: pointer;
+}
+
+#decrease {
+  color: red;
+  border: 2px solid red;
+}
+
+#reset {
+  color: cyan;
+  border: 2px solid cyan;
+}
+
+#increase {
+  color: lime;
+  border: 2px solid lime;
+}
+
+button:hover {
+  background-color: #222;
+}
